@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+    --main-color: #2eca7f;
+    --primary-color-white: #fff;
+    --primary-color-black: #333;
+    --background-color: #eee;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open+Sans", sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    padding: 30px;
+    background-color: var(--background-color);
+    height: 1000px;
+}
+
+.card {
+    max-width: 1000px;
+    min-width: 550px;
+    min-height: 500px;
+    background-color: var(--primary-color-white);
+    border-radius: 10px;
+}
+
+/* ----- Card Header ------------------------------------ */
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--primary-color-white);
+    padding: 12px 25px;
+    text-transform: capitalize;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+}
+
+.header__info img {
+    width: 75px;
+    margin-right: 15px;
+}
+
+.header__socialContact ul {
+    margin-top: 4px;
+    display: flex;
+}
+
+.header__socialContact ul li a {
+    text-decoration: none;
+}
+
+/* ---- For both Card Header and Card Content ----------- */
+.header__socialContact ul li a i,
+.info__btn i {
+    font-size: 12px;
+    color: var(--main-color);
+    background-color: var(--primary-color-white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---- Card Content ---------------------------------- */
+.card__content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.content__nav {
+    width: 160px;
+    padding: 25px;
+    border-right: 1px solid var(--border-color);
+}
+
+.content__nav li {
+    padding: 20px 0;
+    color: var(--primary-color-black);
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+}
+
+.content__nav li.nav__active::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -25px;
+    bottom: 28px;
+}
+
+.content__img {
+    width: 500px;
+    padding: 30px;
+}
+
+.content__img img {
+    width: 100%;
+}
+
+.content__info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--primary-color-black);
+}
+
+.content__info h3 {
+    width: 100%;
+}
+
+.info__intro p {
+    margin: 10px 0;
+}
+
+.info__intro span {
+    font-weight: 600;
+}
+
+.info__btn {
+    width: 100%;
+}
+
+.info__btn button {
+    padding: 8px;
+    margin-top: 20px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    color: var(--primary-color-white);
+    border: none;
+}
+
+@media screen and (max-width: 900px) {
+    .content__img {
+        display: none;
+    }
+    .card__header {
+        font-size: 10px;
+    }
+}
